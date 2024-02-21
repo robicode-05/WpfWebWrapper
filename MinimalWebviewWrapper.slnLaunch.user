@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "DesktopWrapper\\DesktopWrapper.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "StaticFilerServer\\StaticFilerServer.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesktopWrapper", "DesktopWrapper\DesktopWrapper.csproj", "{FA492DF4-AC0B-409E-AC60-250D77351F70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticFileServer", "StaticFilerServer\StaticFileServer.csproj", "{1E41CB21-3DB2-4323-8CE2-B95AEBCC6D48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA492DF4-AC0B-409E-AC60-250D77351F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA492DF4-AC0B-409E-AC60-250D77351F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA492DF4-AC0B-409E-AC60-250D77351F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA492DF4-AC0B-409E-AC60-250D77351F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E41CB21-3DB2-4323-8CE2-B95AEBCC6D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E41CB21-3DB2-4323-8CE2-B95AEBCC6D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E41CB21-3DB2-4323-8CE2-B95AEBCC6D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E41CB21-3DB2-4323-8CE2-B95AEBCC6D48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5F69DC2-51B3-4714-BBD1-03E38C3742A1}
+	EndGlobalSection
+EndGlobal
