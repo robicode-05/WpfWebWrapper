@@ -35,6 +35,6 @@ public partial class MainWindow : Window
     {
         if (!e.IsSuccess) return;
 
-        webView.CoreWebView2.Settings.AreDevToolsEnabled = false;
+        //webView.CoreWebView2.Settings.AreDevToolsEnabled = false;
     }
 }

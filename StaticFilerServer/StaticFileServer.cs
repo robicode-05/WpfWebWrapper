@@ -1,14 +1,22 @@
+using Microsoft.AspNetCore;
+
 public class StaticFileServer
 {
     private readonly WebApplication _webApp;
 
-
     public StaticFileServer()
     {
-        var builder = WebApplication.CreateBuilder();
+        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+        {
+            WebRootPath = "wwwroot",
+        });
+        builder.Services.AddDirectoryBrowser();
+       
         _webApp = builder.Build();
 
-        _webApp.MapGet("/", () => "Hello World!");
+
+        _webApp.UseStaticFiles();
+        _webApp.UseDefaultFiles();
     }
 
     public int Start(string url)
