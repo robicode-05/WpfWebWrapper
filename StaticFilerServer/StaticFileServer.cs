@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.FileProviders;
 
 public class StaticFileServer
 {
@@ -6,17 +8,17 @@ public class StaticFileServer
 
     public StaticFileServer()
     {
-        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-        {
-            WebRootPath = "wwwroot",
-        });
+         //_webApp = WebHost.CreateDefaultBuilder()
+         //  .Configure(config => config.UseStaticFiles())
+         //  .UseWebRoot("wwwroot")
+         //  .UseUrls([url])
+         //  .Build();
+
+        var builder = WebApplication.CreateBuilder();
         builder.Services.AddDirectoryBrowser();
-       
         _webApp = builder.Build();
+        _webApp.UseFileServer(enableDirectoryBrowsing: true);
 
-
-        _webApp.UseStaticFiles();
-        _webApp.UseDefaultFiles();
     }
 
     public int Start(string url)

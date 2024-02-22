@@ -28,7 +28,7 @@ public partial class MainWindow : Window
 
         //App.Self.ServerUrl;
 
-        webView.Source = new Uri(App.Self.ServerUrl ?? "");
+        webView.Source = new Uri($"{App.Self.ServerUrl ?? ""}/index.html");
     }
 
     private void SetExtraConfiguration(object? sender, CoreWebView2InitializationCompletedEventArgs e)
