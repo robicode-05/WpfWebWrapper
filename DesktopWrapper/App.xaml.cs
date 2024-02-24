@@ -29,7 +29,7 @@ public partial class App : Application
         Debug.WriteLine($"Starting server at: {this.ServerUrl}");
 
         // launch web server
-        new Thread(() => new StaticFileServer().Start(this.ServerUrl))
+        new Thread(() => new StaticFileServer(this.ServerUrl).Start())
         {
             IsBackground = true
         }.Start();

@@ -6,24 +6,19 @@ public class StaticFileServer
 {
     private readonly WebApplication _webApp;
 
-    public StaticFileServer()
+    public StaticFileServer(string url)
     {
-         //_webApp = WebHost.CreateDefaultBuilder()
-         //  .Configure(config => config.UseStaticFiles())
-         //  .UseWebRoot("wwwroot")
-         //  .UseUrls([url])
-         //  .Build();
-
         var builder = WebApplication.CreateBuilder();
         builder.Services.AddDirectoryBrowser();
+        builder.Environment.ContentRootPath = "wwwroot";
         _webApp = builder.Build();
+        _webApp.Urls.Add(url);
         _webApp.UseFileServer(enableDirectoryBrowsing: true);
-
     }
 
-    public int Start(string url)
+    public int Start()
     {
-        _webApp.Run(url);
+        _webApp.Run();
         return 0;
     }
 

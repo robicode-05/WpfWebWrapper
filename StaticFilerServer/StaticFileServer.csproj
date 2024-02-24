@@ -5,10 +5,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <OutputType>Library</OutputType>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="XCOPY &quot;$(ProjectDir)wwwroot&quot; &quot;$(TargetDir)\wwwroot&quot; /S /Y" />
+    <Exec Command="IF EXIST &quot;$(TargetDir)wwwroot\&quot; RMDIR /Q /S &quot;$(TargetDir)wwwroot&quot;&#xD;&#xA;XCOPY &quot;$(ProjectDir)..\www&quot; &quot;$(TargetDir)wwwroot&quot; /S /Y /I /E" />
   </Target>
 
 
